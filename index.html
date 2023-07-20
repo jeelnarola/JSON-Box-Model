@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        }
+        form{
+        background-color: antiquewhite;
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+        margin: auto;
+        padding: 30px;
+        margin-top: 20px;
+        border: 5px dotted rgba(0, 0, 0, 0.599);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.432);
+        }
+        #inputbtn{
+            margin: auto;
+            padding: 5px 40px;
+            font-size: 20px;
+        }
+        input{
+            margin: auto;
+            margin-bottom: 10px;
+            padding: 10px;
+            /* text-align: center; */
+        }
+        #div{
+            box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.249);
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.485);
+            border-bottom: 5px solid rgba(143, 142, 142, 0.697);
+            margin-bottom: 15px;
+        }
+        #output{
+            display: grid;
+            /* grid-template-columns: repeat(5,1fr); */
+            gap: 20px;
+            /* margin-top: 200px; */
+            margin: 20px 50px;
+            text-align: center;
+            /* border-radius: 20px; */
+        }
+        .img{
+            width: 250px;
+            height: 250px;
+            display: inline-block;
+            background-color: rgba(164, 166, 167, 0.337);
+        }
+        .h1{
+            font-weight: 900;
+            word-spacing: 2px;
+            color: black;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            font-size: 20px;
+            margin-top: 20px;
+        }.button{
+            padding: 10px 50px;
+            display: block;
+            margin: auto;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            background-color: rgba(230, 72, 104, 0.783);
+            color: white;
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: 13px;
+    
+        }
+        .cetagory{
+            display: inline-block;
+           font-size: 30px;
+           margin: 0px;
+           margin-top: 20px;
+        }
+        .price2{
+            display: flex;
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            text-decoration: line-through;
+            /* padding:10px 0px; */
+            /* margin-bottom: -60px; */
+        }
+
+        @media (max-width:565px) {
+
+            #output{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 10px;
+        }
+       
+        }
+        @media  (min-width:567px){
+
+            #output{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+        }
+
+        }
+        @media (min-width:991px) {
+            #output{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="url" placeholder="img url" id="img" required>
+        <input type="text" placeholder="product name" id="name"required>
+        <input type="number" placeholder="enter price" id="price"required>
+        <!-- <input type="number" placeholder="cetagory" id="cetagory"> -->
+        <input type="submit" value="post" id="inputbtn">
+    </form>
+    <div id="output"></div>
+</body>
+<script src="./index.js"></script>
+</html>
